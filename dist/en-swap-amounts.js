@@ -98,7 +98,6 @@ class enSwapAmounts {
 
 /* harmony default export */ var app = (enSwapAmounts);
 ;// CONCATENATED MODULE: ./src/index.js
- // import "./scss/main.scss";
 
 new app();
 /******/ })()
