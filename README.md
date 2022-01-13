@@ -7,7 +7,7 @@ A simple script that allows you to swap the giving amounts with a list provided 
 1 - Add the script below to your donation page.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/en-swap-amountsg@latest/dist/en-swap-amounts.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/en-swap-amountg@latest/dist/en-swap-amounts.js"></script>
 ```
 
 2 - Add the custom amounts to the URL. Possible values are:
