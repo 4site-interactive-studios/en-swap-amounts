@@ -44,15 +44,33 @@ export class enSwapAmounts {
     const urlParams = new URLSearchParams(queryString);
     return urlParams.get(name);
   }
+  getFieldValue(name) {
+    return new FormData(document.querySelector("form.en__component"))
+      .getAll(name)
+      .join(",");
+  }
   swapAmounts(recurring) {
     const recurringOptions = {
       N: "single",
       Y: "monthly",
     };
-    const newValues = this.getUrlParameter(recurringOptions[recurring]);
-    const defaultValue = this.getUrlParameter(
-      recurringOptions[recurring] + "-default"
-    );
+    let newValues,
+      defaultValue = "";
+    if (
+      window.hasOwnProperty("enSwapAmountsOptions") &&
+      window.enSwapAmountsOptions.hasOwnProperty(recurringOptions[recurring])
+    ) {
+      newValues = this.getFieldValue(
+        window.enSwapAmountsOptions[recurringOptions[recurring]]
+      );
+      defaultValue = this.getFieldValue(
+        window.enSwapAmountsOptions[recurringOptions[recurring] + "-default"]
+      );
+    }
+    newValues = newValues || this.getUrlParameter(recurringOptions[recurring]);
+    defaultValue =
+      defaultValue ||
+      this.getUrlParameter(recurringOptions[recurring] + "-default");
     if (newValues) {
       const loadEnAmounts = (amountArray, amountDefault) => {
         let ret = [];
