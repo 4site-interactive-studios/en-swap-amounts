@@ -12,9 +12,9 @@ A simple script that allows you to swap the giving amounts with a list provided 
 
 2 - Add the custom amounts to the URL. Possible values are:
 
-- `single`: Comma separated list of one-time amounts.
+- `single`: Comma-separated list of one-time amounts.
 - `single-default`: Default amount for one-time donations.
-- `monthly`: Comma separated list of monthly amounts.
+- `monthly`: Comma-separated list of monthly amounts.
 - `monthly-default`: Default amount for monthly donations.
 
 Example: `https://example.com/donate?single=25,50,100,150,200&single-default=100&monthly=5,10,50,100,500&monthly-default=10`
